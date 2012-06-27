@@ -1,21 +1,11 @@
 <div class="center hero-unit">
 
-	<% if user_signed_in? %>
-		
-	    <h1>Bienvenido <%=current_user.name %>!</h1>
-		<br>
-		<h2>Existen <%= @info_requests.count %> solicitudes de información</h2>
-		<br>
-		<%= render partial: 'shared/info_request_table' %>
-       
-		<%= render partial: 'shared/info_request_detail' %>
-
-	<% else %>
+	
 		<h1>Bienvenidos al Portal de la Central de Información</h1>
 		<br>
 		<h2>Aquí encontrarás todo lo relacionado con la información de Méderi</h2>
 		<%= link_to "Ingresar",  new_user_session_path, 
                                 class: "btn btn-large btn-primary" %>
-	<% end %>
+	
 	
 </div>

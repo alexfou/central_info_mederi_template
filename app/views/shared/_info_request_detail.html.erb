@@ -1,0 +1,18 @@
+<% if !@specific_request.nil? %>
+ <h2> Detalle de la solicitud </h2>
+  <table class = "table" id ="ird_table">
+  	<tr>
+    	<th>Titulo</th>
+    	<th>Creador</th>
+      <th>Creada en</th>
+  	</tr>
+
+   
+  	<tr>
+    	<td><%= @specific_request.title %></td>  
+    	<td><%= @specific_request.name%></td>
+      <td><%= @specific_request.created_at %></td>
+  	</tr>
+<% else
+   end %>
+</table>

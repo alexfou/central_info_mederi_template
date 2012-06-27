@@ -1,0 +1,13 @@
+<table class = "table">
+  	<tr>
+    	<th>Titulo</th>
+    	<th>Creador</th>
+  	</tr>
+
+   	<% @info_requests.each do |ir| %>
+  	<tr>
+    	<td><%= link_to ir.title, { :info_request => ir.id, :controller => "users", :action => "show"}, {:remote => true, :id => "new_review"} %></td>  
+    	<td><%= ir.name %></td>
+  	</tr>
+  	<% end %>
+</table>

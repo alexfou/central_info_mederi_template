@@ -2,3 +2,24 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+
+<div class="center hero-unit">
+
+	<% if user_signed_in? %>
+		
+	    <h1>Bienvenido <%=current_user.name %>!</h1>
+		<br>
+		<h2>Existen <%= @info_requests.count %> solicitudes de información</h2>
+		<br>
+
+		<div><%= render partial: 'shared/info_request_table' %></div>
+
+		<div id = "ird_table"><%= render partial: 'shared/info_request_detail' %></div>
+       
+		
+
+	<% else %>
+		<%= redirect_to root_path %>
+	<% end %>
+	
+</div>
