@@ -1,0 +1,11 @@
+<h1>Creación de solicitud</h1>
+<%= form_tag info_requests_path, :method=>'post' do %>
+
+  <%= label :info_request, :title, 'Título' %>
+  <%= text_field :info_request, 'title' %>
+
+  <%= label :info_request, :owner_id, 'Dueño de la solicitud' %>
+  <%= collection_select(:info_request, :owner_id, User.all, :id, :name) %>
+
+  <%= submit_tag 'Guardar solicitud' %>
+<%end%>

@@ -16,11 +16,14 @@ puts 'New user created: ' << user1.name
 user2 = User.create! :name => 'Usuario 2', :email => 'usu2@example.com', :password => 'usu222', :password_confirmation => 'usu222'
 puts 'New user created: ' << user2.name
 
-info_request_1 = InfoRequest.create! :title => "Titulo de solicitud #1", :creator_id => 2
-puts 'Info request 1 created: ' << info_request_1.title
+user1.created_info_requests.create({title: "Bla Bla USU1 - 1"})
+user2.created_info_requests.create({title: "Bla Bla USU2 - 1"})
+user2.created_info_requests.create({title: "Bla Bla USU2 - 2"})
+# info_request_1 = InfoRequest.create! :title => "Titulo de solicitud #1", :creator_id => 2
+# puts 'Info request 1 created: ' << info_request_1.title
 
-info_request_2 = InfoRequest.create! :title => "Titulo de solicitud #2", :creator_id => 3
-puts 'Info request 2 created: ' << info_request_1.title
+# info_request_2 = InfoRequest.create! :title => "Titulo de solicitud #2", :creator_id => 3
+# puts 'Info request 2 created: ' << info_request_1.title
 
-info_request_3 = InfoRequest.create! :title => "Titulo de solicitud #3", :creator_id => 3
-puts 'Info request 3 created: ' << info_request_1.title
+# info_request_3 = InfoRequest.create! :title => "Titulo de solicitud #3", :creator_id => 3
+# puts 'Info request 3 created: ' << info_request_1.title
